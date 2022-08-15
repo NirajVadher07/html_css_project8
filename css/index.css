@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 *{
     font-family: "Mochiy Pop One","serif";
+    outline: 0;
+    margin: 0;
+    padding: 0;
 }
-.main-div nav img{
-    position: absolute;
-    top: 6%;
-    left: 5%;
+.main-div{
+    height: 100vh;
+    background-image: url("../images/backcover.svg");
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.main-div nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    padding: 10px;
+}
+.logo{
+    width: 10%;
 }
 .nav-items{
-    display: inline-flex;
-    position: absolute;
-    top: 15px;
-    left: 25%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
 }
 .nav-item{
     padding: 0 25px;
@@ -24,12 +38,10 @@
     border-bottom: 2px solid #9110ae;
 }
 .signin-btn{
+    width: 10%;
     font-size:large;
     width: 100px;
-    border-radius: 8px;
-    position: absolute;
-    top: 6.5%;
-    left: 85%;
+    border-radius: 8px;    
     background-color: transparent;
     border-color: #9110ae;
     color: #9110ae;
@@ -42,47 +54,101 @@
     color: white;
     border-color: white;
 }
-.left-section h1{
-    position: absolute;
-    top: 150px;
-    left: 75px;
+.intro-section{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-section{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.left-section h1{    
     font-size: 60px;
     color: #1a1a7b;
+    margin: 2% 2%;
 }
 .left-section h4{
-    position: absolute;
-    top: 275px;
-    left: 75px;
     width: 400px;
+    margin: 2% 2%;
 }
 .learn-more-btn{
-    position: absolute;
-    top: 400px;
-    left: 100px;
     padding: 10px;
+    margin: 2% 2%;
     background-color: #1a1a7b;
     color: white;
     border-radius: 30px;
     width: 150px;
     border-color: white;
+    cursor: pointer;
 }
-.intro-img{
-    position: absolute;
-    top: 100px;
-    left: 550px;
+.vectors{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
-.vector-img{
-    position: absolute;
-    top: 390px;
-    left: 450px;
+.imgs-div{
+    width: 60%;
+    height: 100%;
+    display: flex;
 }
 .vector-dot{
-    position: absolute;
-    top: 400px;
-    left: 505px;
+    position: relative;
+    bottom:20%;
+    right: 20%;
 }
-.backcover{
-    position: absolute;
-    right: 0%;
-    top: -40%;
+.intro-img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:900px){
+    .main-div nav{
+        flex-direction: column;
+        height: fit-content;
+        padding: 20px;
+    }
+    .logo{
+        width: 40%;
+        align-self: center;
+    }
+    .nav-items{
+        width: 100%;        
+        height: fit-content;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .signin-btn{
+        margin: auto;
+    }
+    .intro-section{
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .imgs-div{
+        width: 100%;
+        background-image: none;
+    }
+    .intro-img{
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .vectors{
+        display: none;
+    }
+    .left-section{
+        width: 100%;
+        height: fit-contents;
+        margin: 0;
+    }
+    .learn-more-btn{
+        margin: auto;
+    }
 }
